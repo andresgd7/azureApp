@@ -6,7 +6,7 @@ export default function App() {
 
   const obtenerData = async () => {
     try {
-      const response = await fetch('/api/tu-ruta-de-api');
+      const response = await fetch('/api/message');
       
       if (!response.ok) {
         throw new Error('No se pudo obtener la data de la API');
