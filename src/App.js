@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './views/home/home.js'
-import Login from './login'
+import Login from './views/login/login.js'
 import './App.css'
 import { useEffect, useState } from 'react'
 
