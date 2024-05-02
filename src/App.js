@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 
 export default function App() {
   const [data, setData] = useState(null);
+  const [mostrarMensaje, setMostrarMensaje] = useState(false);
 
   const obtenerData = async () => {
     setData("Api en construcción");
+    setMostrarMensaje(true);
   };
 
   return (
@@ -17,9 +19,11 @@ export default function App() {
           Obtener data
         </button>
       </div>
-      <div style={{ marginTop: '20px', fontSize: '18px' }}>
-        {data ? data : "Api en construcción"}
-      </div>
+      {mostrarMensaje && (
+        <div style={{ marginTop: '20px', fontSize: '18px' }}>
+          {data ? data : "Api en construcción"}
+        </div>
+      )}
     </div>
   );
 }
