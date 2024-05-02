@@ -1,23 +1,25 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './views/home/home.js'
-import Login from './views/login/login.js'
-import './App.css'
-import { useEffect, useState } from 'react'
+import React, { useState } from 'react';
 
-function App() {
-  const [loggedIn, setLoggedIn] = useState(false)
-  const [email, setEmail] = useState('')
+export default function App() {
+  const [data, setData] = useState(null);
+
+  const obtenerData = async () => {
+    setData("Api en construcción");
+  };
 
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home email={email} loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
-          <Route path="/login" element={<Login setLoggedIn={setLoggedIn} setEmail={setEmail} />} />
-        </Routes>
-      </BrowserRouter>
+    <div style={{ fontFamily: 'Arial, sans-serif', textAlign: 'center' }}>
+      <div style={{ fontSize: '24px', marginBottom: '20px' }}>
+        Bienvenido
+      </div>
+      <div>
+        <button onClick={obtenerData} style={{ padding: '10px 20px', fontSize: '16px', borderRadius: '5px', backgroundColor: '#007bff', color: '#fff', border: 'none', cursor: 'pointer' }}>
+          Obtener data
+        </button>
+      </div>
+      <div style={{ marginTop: '20px', fontSize: '18px' }}>
+        {data ? data : "Api en construcción"}
+      </div>
     </div>
-  )
+  );
 }
-
-export default App
