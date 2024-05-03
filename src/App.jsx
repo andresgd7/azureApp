@@ -6,17 +6,18 @@ export default function App() {
 
   const obtenerData = async () => {
     try {
-      const response = await fetch('/api/message');
-      
+      const response = await fetch('/api/message2');
+
       if (!response.ok) {
         throw new Error('No se pudo obtener la data de la API');
       }
-      
-      const responseData = await response.json();
-      
+      const responseData = await response.text();
+      console.log(response);
+
       setData(responseData);
       setMostrarMensaje(true);
     } catch (error) {
+
       console.error('Error al obtener la data:', error);
       setData("Error al obtener la data");
       setMostrarMensaje(true);
