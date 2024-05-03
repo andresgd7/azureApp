@@ -1,8 +1,9 @@
 	1. Create a github repository. This time i'm using this react template wich is provided by microsoft:
 	
 		https://github.com/staticwebdev/react-basic/generate
-		
-		![image](https://github.com/andresgd7/azureApp/assets/20409630/07a698ce-8328-46c9-9e3f-7c872e893145)
+
+![image](https://github.com/andresgd7/azureApp/assets/20409630/4bff6263-df47-43b1-bb62-f54187fd23f4)
+
 
 
 	2. Clone the repository in vs code.
